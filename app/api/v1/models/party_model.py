@@ -74,3 +74,22 @@ class PParties:
         else:
             msg = False
         return msg
+
+    def get_all_parties():
+        """ get all parties """
+        global P_PARTIES
+        msg = None
+
+        if P_PARTIES == []:
+            msg = {
+                "status": "200",
+                "data": "The Party list is empty"
+            }
+
+        else:
+            msg = {
+                "status": "200",
+                "data": POLITICAL_PARTIES
+            }
+
+        return msg
