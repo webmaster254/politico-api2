@@ -60,6 +60,10 @@ class TestPParties(unittest.TestCase):
             {'status': 'Failed', 'error': 'Party already exists'}
         )
 
+    def test_fetching_all_parties_returns_data(self):
+        """ Test that a dictionary holding the data is returned """
+        self.assertIsInstance(self.test_data.get_all_parties(), dict)
+
 
 if __name__ == "__main__":
     unittest.main()
