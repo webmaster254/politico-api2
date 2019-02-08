@@ -25,12 +25,12 @@ def parties():
             }), 400
         elif sample_party.check_for_expected_value_types() is False:
             custom_response = jsonify({
-                "status": "Unprocessable Entity",
+                "status": "404",
                 "error": "Invalid value in data field"
             }), 422
         elif sample_party.check_for_any_empty_fields() is False:
             custom_response = jsonify({
-                "status": "Unprocessable Entity",
+                "status": "404",
                 "error": "Empty data field"
             }), 422
             else:

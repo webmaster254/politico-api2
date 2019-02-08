@@ -64,6 +64,14 @@ class TestPParties(unittest.TestCase):
         """ Test that a dictionary holding the data is returned """
         self.assertIsInstance(self.test_data.get_all_parties(), dict)
 
+    def test_edit_party_performs_operation_and_returns_message(self):
+        """ Test that valid user data gets updated """
+        valid_update_data = {"name": "Jubilee"}
+        self.test_data.create_party()
+        self.assertEqual(
+            [{"id": 1, "name": "Jubilee"}],
+            PoliticalParties.edit_party(valid_update_data, 1),
+            msg="Expected Success status and new name"
 
 if __name__ == "__main__":
     unittest.main()

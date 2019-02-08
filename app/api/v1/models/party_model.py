@@ -103,12 +103,11 @@ class PParties:
         else:
             return False
     
-     def fetch_a_party(pid):
+    def fetch_a_party(pid):
         """ Fetch a political party by ID"""
         global P_PARTIES
         return [party for party in P_PARTIES if party['id'] == pid]
 
-    
     def check_for_valid_party_name(name):
         """ check name is not empty string, space & longer than 1 charaster"""
         if isinstance(name, str):
@@ -116,7 +115,6 @@ class PParties:
         else:
             return False
 
- 
     def edit_party(user_data, pid):
         """ Edit apolitical party """
         global P_PARTIES
