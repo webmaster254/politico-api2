@@ -72,6 +72,5 @@ class TestPParties(unittest.TestCase):
             [{"id": 1, "name": "Jubilee"}],
             PoliticalParties.edit_party(valid_update_data, 1),
             msg="Expected Success status and new name"
-
-if __name__ == "__main__":
-    unittest.main()
+            if __name__ == "__main__" :
+                unittest.main()
